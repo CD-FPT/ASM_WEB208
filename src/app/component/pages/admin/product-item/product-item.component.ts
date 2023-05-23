@@ -1,4 +1,4 @@
-import { Component,EventEmitter,Input,Output } from '@angular/core';
+import { Component, EventEmitter, Input, Output } from '@angular/core';
 
 @Component({
   selector: 'tr[app-product-item]',
@@ -10,8 +10,10 @@ export class ProductItemComponent {
   @Input() index: any;
   @Output() onRemove: EventEmitter<any> = new EventEmitter();
 
-
-  removeItem(id: any) {
-    this.onRemove.emit(id);
+  confirmDelete(id: any) {
+      this.onRemove.emit(id);
   }
+  // removeItem(id: any) {
+  //   this.onRemove.emit(id);
+  // }
 }
