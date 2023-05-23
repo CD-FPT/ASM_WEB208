@@ -4,7 +4,7 @@
 <td class="align-middle">{{ product.price }}</td>
 <td class="align-middle">{{product.description}}</td>
 <td class="align-middle">
-  <button class="btn btn-danger mt-3 pr-2" (click)="confirmDelete(product._id)">
+  <button class="btn btn-danger" (click)="confirmDelete(product._id)">
     Remove
   </button>
   <a [routerLink]="['/admin/products',product.id,'update']">
