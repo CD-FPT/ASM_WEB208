@@ -7,7 +7,7 @@
   <button class="btn btn-danger mt-3 pr-2" (click)="confirmDelete(product._id)">
     Remove
   </button>
-  <button class="btn btn-primary mt-3 pr-2" >
-     Update
-  </button>
+  <a [routerLink]="['/admin/products',product.id,'update']">
+    <button class="btn btn-primary ms-2"> Update </button>
+  </a>
 </td>
