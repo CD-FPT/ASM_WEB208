@@ -31,6 +31,46 @@
             "description": "Durable premium design 14",
             "img": "https://cdn.tgdd.vn/Products/Images/42/251192/iphone-14-pro-max-den-thumb-600x600.jpg",
             "idCate": 2
+        },
+        {
+            "id": 5,
+            "name": "Iphone 14",
+            "price": 14000,
+            "description": "Durable premium design 14",
+            "img": "https://cdn.tgdd.vn/Products/Images/42/251192/iphone-14-pro-max-den-thumb-600x600.jpg",
+            "idCate": 2
+        },
+        {
+            "id": 6,
+            "name": "Iphone 14",
+            "price": 14000,
+            "description": "Durable premium design 14",
+            "img": "https://cdn.tgdd.vn/Products/Images/42/251192/iphone-14-pro-max-den-thumb-600x600.jpg",
+            "idCate": 2
+        },
+        {
+            "id": 7,
+            "name": "Iphone 14",
+            "price": 14000,
+            "description": "Durable premium design 14",
+            "img": "https://cdn.tgdd.vn/Products/Images/42/251192/iphone-14-pro-max-den-thumb-600x600.jpg",
+            "idCate": 2
+        },
+        {
+            "id": 8,
+            "name": "Iphone 14",
+            "price": 14000,
+            "description": "Durable premium design 14",
+            "img": "https://cdn.tgdd.vn/Products/Images/42/251192/iphone-14-pro-max-den-thumb-600x600.jpg",
+            "idCate": 2
+        },
+        {
+            "id": 9,
+            "name": "Iphone 14",
+            "price": 14000,
+            "description": "Durable premium design 14",
+            "img": "https://cdn.tgdd.vn/Products/Images/42/251192/iphone-14-pro-max-den-thumb-600x600.jpg",
+            "idCate": 2
         }
     ],
     "category": [
