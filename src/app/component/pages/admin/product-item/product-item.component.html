@@ -3,12 +3,11 @@
 <td>{{ product.name }}</td>
 <td>{{ product.price }}</td>
 <td>{{product.description}}</td>
-<td>
+<td class="mx-auto">
   <button class="btn btn-danger" (click)="removeItem(product._id)">
     Remove
   </button>
-  
-  <button class="btn btn-primary" (click)="removeItem(product._id)">
-    Update
-  </button>
+  <a [routerLink]="['/admin/products',product.id,'update']">
+    <button class="btn btn-primary ms-2"> Update </button>
+  </a>
 </td>

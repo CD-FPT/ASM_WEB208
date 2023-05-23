@@ -2,6 +2,9 @@ import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { HttpClientModule } from '@angular/common/http';
 import { AppRoutingModule } from './app-routing.module';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+
+
 import { AppComponent } from './app.component';
 import { AdminLayoutComponent } from './component/layouts/admin-layout/admin-layout.component';
 import { WebLayoutComponent } from './component/layouts/web-layout/web-layout.component';
@@ -31,7 +34,9 @@ import { ProductItemComponent } from './component/pages/admin/product-item/produ
   imports: [
     BrowserModule,
     AppRoutingModule,
-    HttpClientModule
+    HttpClientModule,
+    FormsModule,
+    ReactiveFormsModule
 
   ],
   providers: [],
