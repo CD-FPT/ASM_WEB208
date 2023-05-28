@@ -21,4 +21,9 @@ export class ServiceService {
   updateProduct(product: IProduct): Observable<IProduct> {
     return this.http.put<IProduct>(`http://localhost:3000/products/${product.id}`, product);
   }
+
+  addProduct(product: IProduct): Observable<IProduct> {
+    return this.http.post<IProduct>(`http://localhost:3000/products`, product);
+  }
+
 }

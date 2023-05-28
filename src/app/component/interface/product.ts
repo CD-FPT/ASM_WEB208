@@ -3,6 +3,5 @@ export interface IProduct {
     name: string | null | undefined;
     description: string | null | undefined;
     price: number | null | undefined;
-    img?: string | null | undefined
-    ;
+    img?: string | null | undefined;
 }
