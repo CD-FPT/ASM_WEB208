@@ -9,6 +9,8 @@ import { ManagerProductsComponent } from './component/pages/admin/manager-produc
 import { UpdateProductComponent } from './component/pages/admin/update-product/update-product.component';
 import { AddProductComponent } from './component/pages/admin/add-product/add-product.component';
 import { AdminLayoutComponent } from './component/layouts/admin-layout/admin-layout.component';
+import { SigninComponent } from './component/auth/signin/signin.component';
+import { SignupComponent } from './component/auth/signup/signup.component';
 
 const routes: Routes = [
   {
@@ -18,6 +20,8 @@ const routes: Routes = [
       { path: 'products/:id', component: DetailPageComponent },
     ]
   },
+  { path: 'signin', component: SigninComponent },
+  { path: 'signup', component: SignupComponent },
   {
     path: 'admin', component: AdminLayoutComponent, children: [
       { path: '', redirectTo: 'dashboard', pathMatch: 'full' },
