@@ -16,6 +16,7 @@ import { ManagerProductsComponent } from './component/pages/admin/manager-produc
 import { AddProductComponent } from './component/pages/admin/add-product/add-product.component';
 import { UpdateProductComponent } from './component/pages/admin/update-product/update-product.component';
 import { ProductItemComponent } from './component/pages/admin/product-item/product-item.component';
+import { CarouselModule } from 'ngx-bootstrap/carousel';
 import { SignupComponent } from './component/auth/signup/signup.component';
 import { SigninComponent } from './component/auth/signin/signin.component';
 
@@ -32,6 +33,7 @@ import { SigninComponent } from './component/auth/signin/signin.component';
     AddProductComponent,
     UpdateProductComponent,
     ProductItemComponent,
+   
     SignupComponent,
     SigninComponent
   ],
@@ -40,7 +42,9 @@ import { SigninComponent } from './component/auth/signin/signin.component';
     AppRoutingModule,
     HttpClientModule,
     FormsModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
+    CarouselModule.forRoot()
+    
 
   ],
   providers: [],
