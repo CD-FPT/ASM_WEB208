@@ -17,6 +17,8 @@ import { AddProductComponent } from './component/pages/admin/add-product/add-pro
 import { UpdateProductComponent } from './component/pages/admin/update-product/update-product.component';
 import { ProductItemComponent } from './component/pages/admin/product-item/product-item.component';
 import { CarouselModule } from 'ngx-bootstrap/carousel';
+import { SignupComponent } from './component/auth/signup/signup.component';
+import { SigninComponent } from './component/auth/signin/signin.component';
 
 @NgModule({
   declarations: [
@@ -32,6 +34,8 @@ import { CarouselModule } from 'ngx-bootstrap/carousel';
     UpdateProductComponent,
     ProductItemComponent,
    
+    SignupComponent,
+    SigninComponent
   ],
   imports: [
     BrowserModule,
