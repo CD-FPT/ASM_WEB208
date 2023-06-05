@@ -1,8 +1,10 @@
-import { Component } from '@angular/core';
+import { Component, Input, OnInit } from '@angular/core';
 import { FormBuilder } from '@angular/forms';
 import { ActivatedRoute, Router } from '@angular/router';
 import { ServiceService } from 'src/app/component/service/service.service';
 import { IProduct } from 'src/app/component/interface/product';
+import { CategoryService } from 'src/app/component/service/category.service';
+import { Icate } from 'src/app/component/interface/category';
 
 
 @Component({
@@ -11,11 +13,18 @@ import { IProduct } from 'src/app/component/interface/product';
   styleUrls: ['./add-product.component.css']
 })
 export class AddProductComponent {
-
+  category: Icate[] = []
+  ngOnInit() {
+    this.categoryService.getAllCate().subscribe(data => {
+      this.category = data.datas
+      console.log(data.datas);
+    })
+  }
   constructor(
     private formBuilder: FormBuilder,
     private service: ServiceService,
-    private router: Router
+    private router: Router,
+    private categoryService: CategoryService
   ) { }
 
   // productForm = new FormGroup({
@@ -28,7 +37,8 @@ export class AddProductComponent {
     name: [''],
     price: 0,
     description: [''],
-    img: ['']
+    image: [''],
+    categoryId: ['']
   })
 
   AddProduct() {
@@ -38,7 +48,8 @@ export class AddProductComponent {
         name: this.productForm.value.name || '',
         price: this.productForm.value.price || 0,
         description: this.productForm.value.description || '',
-        img: this.productForm.value.img || '',
+        image: this.productForm.value.image || '',
+        categoryId: this.productForm.value.categoryId || ''
       }
       this.service.addProduct(product).subscribe(data => {
         console.log(data);

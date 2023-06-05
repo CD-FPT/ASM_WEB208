@@ -1,8 +1,10 @@
+import { CategoryService } from './../../../service/category.service';
 import { Component } from '@angular/core';
 import { IProduct } from 'src/app/component/interface/product';
 import { FormBuilder } from '@angular/forms';
 import { ActivatedRoute, Router } from '@angular/router';
 import { ServiceService } from 'src/app/component/service/service.service';
+import { Icate } from 'src/app/component/interface/category';
 
 @Component({
   selector: 'app-update-product',
@@ -11,42 +13,59 @@ import { ServiceService } from 'src/app/component/service/service.service';
 })
 export class UpdateProductComponent {
   product!: IProduct;
+  category: Icate[] = [];
   productForm = this.formBuilder.group({
     name: [''],
     price: 0,
     description: '',
-    img: ''
+    image: '',
+    categoryId: ''
   })
 
-  constructor(private productService: ServiceService,
-    private route: ActivatedRoute, private formBuilder: FormBuilder, private router: Router
+  constructor(
+    private productService: ServiceService,
+    private route: ActivatedRoute,
+    private formBuilder: FormBuilder,
+    private router: Router,
+    private categoryService: CategoryService
   ) {
     this.route.paramMap.subscribe(params => {
       const id = params.get('id');
       console.log(id);
-      this.productService.getProduct(id).subscribe(product => {
-        this.product = product
-        this.productForm.patchValue({
-          name: product.name,
-          price: product.price,
-          description: product.description,
-          img: product.img
+
+
+      this.productService.getProduct(id).subscribe(data => {
+        this.product = data.datas
+        console.log(this.product);
+        this.categoryService.getAllCate().subscribe(data => {
+          this.category = data.datas
+          this.productForm.patchValue({
+            name: this.product.name,
+            price: this.product.price,
+            description: this.product.description,
+            image: this.product.image,
+            categoryId: this.product.categoryId,
+          })
         })
+
+        
       })
     })
-    console.log(this.productForm.value);
+    // console.log(this.productForm.value); 
 
   }
   onHandleEdit() {
     if (this.productForm.valid) {
       const product: IProduct = {
-        id: this.product.id,
+        _id: this.product._id,
         name: this.productForm.value.name || "",
         price: this.productForm.value.price || 0,
         description: this.productForm.value.description || "",
-        img: this.productForm.value.img || "",
+        image: this.productForm.value.image || "",
+        categoryId: this.productForm.value.categoryId || "",
       }
-
+      // console.log(this.product._id);
+      
       this.productService.updateProduct(product).subscribe(data => {
         console.log(data);
         this.router.navigate(['admin/products'])

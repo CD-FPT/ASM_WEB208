@@ -15,7 +15,7 @@ export class ProductsPageComponent {
 
  constructor (private productService:ServiceService){
   this.productService.getProducts().subscribe(data=>{
-    this.products = data
+    this.products = data.datas
   })
  }
  getValue(e: any) {

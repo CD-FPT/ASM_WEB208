@@ -9,21 +9,21 @@ export class ServiceService {
 
 
   constructor(private http: HttpClient) { }
-  getProducts(): Observable<IProduct[]> {
-    return this.http.get<IProduct[]>('http://localhost:3000/products');
+  getProducts() {
+    return this.http.get<any>('http://localhost:8088/api/products');
   }
-  getProduct(id: any): Observable<IProduct> {
-    return this.http.get<IProduct>('http://localhost:3000/products/' + id);
+  getProduct(id: any): Observable<any> {
+    return this.http.get<any>('http://localhost:8088/api/products/' + id);
   }
   deleteProduct(id: number | string): Observable<IProduct> {
-    return this.http.delete<IProduct>('http://localhost:3000/products/' + id);
+    return this.http.delete<IProduct>('http://localhost:8088/api/products/' + id);
   }
   updateProduct(product: IProduct): Observable<IProduct> {
-    return this.http.put<IProduct>(`http://localhost:3000/products/${product.id}`, product);
+    return this.http.patch<IProduct>(`http://localhost:8088/api/products/${product._id}`, product);
   }
 
   addProduct(product: IProduct): Observable<IProduct> {
-    return this.http.post<IProduct>(`http://localhost:3000/products`, product);
+    return this.http.post<IProduct>(`http://localhost:8088/api/products`, product);
   }
 
 }
