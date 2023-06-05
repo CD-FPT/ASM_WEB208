@@ -25,12 +25,11 @@ export class DetailPageComponent {
       const id = param.get('id');
       this.productService.getProduct(id).subscribe(product => {
         // Sản phẩm dựa theo ID
-        this.product = product;
+        this.product = product.datas;
 
-        this.productForm.patchValue({
-          name: product.name,
-          price: product.price
-        })
+        // this.productForm.patchValue({
+        //   name: product.name,
+        //   price: product.price
       })
     })
 

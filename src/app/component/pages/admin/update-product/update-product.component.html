@@ -2,7 +2,7 @@
     <h2>Cập nhật sản phẩm</h2>
     <div class="detail">
         <div class="img">
-            <img [src]="productForm.get('img')?.value" alt="">
+            <img [src]="productForm.get('image')?.value" alt="">
         </div>
         <div class="detail-info">
             <div class="mb-3">
@@ -16,6 +16,12 @@
             <div class="mb-3">
                 <label for="exampleInputPassword1" class="form-label">Mô tả sản phấm</label>
                 <input type="text" class="form-control" formControlName="description">
+            </div>
+            <div class="mb-3">
+                <label for="" class="form-label">Danh mục sản phấm</label>
+                <select  formControlName="categoryId" class="form-select" >
+                    <option *ngFor="let cate of category" value="{{cate._id}}">{{cate.name}}</option>
+                  </select>
             </div>
             <button type="submit" class="btn btn-primary">Submit</button>
         </div>

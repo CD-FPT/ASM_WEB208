@@ -68,7 +68,7 @@
         <div class="col mb-5 flex-fill">
           <div class="card h-100">
             <!-- Product image-->
-            <img class="card-img-top my-5" src="{{ product.img }}" alt="..." />
+            <img class="card-img-top my-5" src="{{ product.image }}" alt="..." />
             <!-- Product details-->
             <div class="card-body p-4">
               <div class="text-center">
@@ -83,7 +83,7 @@
               <div class="text-center">
                 <a
                   class="btn btn-outline-dark mt-auto"
-                  [routerLink]="['/products', product.id]"
+                  [routerLink]="['/products', product._id]"
                   >View options</a
                 >
               </div>
