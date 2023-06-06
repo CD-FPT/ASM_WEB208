@@ -19,6 +19,8 @@ import { ProductItemComponent } from './component/pages/admin/product-item/produ
 // import { CarouselModule } from 'ngx-bootstrap/carousel';
 import { SignupComponent } from './component/auth/signup/signup.component';
 import { SigninComponent } from './component/auth/signin/signin.component';
+// import { CategoryComponent } from './component/pages/admin/category/category.component';
+import { AddCategoryComponent } from './component/pages/admin/add-category/add-category.component';
 
 @NgModule({
   declarations: [
@@ -35,7 +37,9 @@ import { SigninComponent } from './component/auth/signin/signin.component';
     ProductItemComponent,
    
     SignupComponent,
-    SigninComponent
+    SigninComponent,
+    // CategoryComponent,
+    AddCategoryComponent
   ],
   imports: [
     BrowserModule,
