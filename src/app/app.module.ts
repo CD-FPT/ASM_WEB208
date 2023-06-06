@@ -39,7 +39,8 @@ import { AddCategoryComponent } from './component/pages/admin/add-category/add-c
     SignupComponent,
     SigninComponent,
     // CategoryComponent,
-    AddCategoryComponent
+    AddCategoryComponent,
+    
   ],
   imports: [
     BrowserModule,
