@@ -37,7 +37,7 @@
                 <input type="password" formControlName="password" placeholder="Password" />
                 <div class="errorValidate" *ngIf="
                     formSignup.get('password')?.hasError('required') &&
-                    (formSignup.get('password')?.touched || formSignup.get('email')?.dirty)
+                    (formSignup.get('password')?.touched || formSignup.get('password')?.dirty)
                     ">
                     Password không được để trống
                 </div>
