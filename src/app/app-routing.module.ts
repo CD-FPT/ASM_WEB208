@@ -11,6 +11,7 @@ import { AddProductComponent } from './component/pages/admin/add-product/add-pro
 import { AdminLayoutComponent } from './component/layouts/admin-layout/admin-layout.component';
 import { SigninComponent } from './component/auth/signin/signin.component';
 import { SignupComponent } from './component/auth/signup/signup.component';
+import { AddCategoryComponent } from './component/pages/admin/add-category/add-category.component';
 
 const routes: Routes = [
   {
@@ -29,6 +30,7 @@ const routes: Routes = [
       { path: 'products', component: ManagerProductsComponent },
       { path: 'add', component: AddProductComponent },
       { path: 'products/:id/update', component: UpdateProductComponent },
+      { path: 'categoryAdd', component: AddCategoryComponent },
     ]
   },
 ];
