@@ -16,5 +16,8 @@ export class CategoryService {
   addCategory(category: any) {
     return this.http.post('http://localhost:8088/api/categories', category);
   }
+  deleteCategory(id: number | string): Observable<Icate> {
+    return this.http.delete<Icate>('http://localhost:8088/api/categories/' + id);
+  }
   
 }

@@ -22,6 +22,9 @@ import { SigninComponent } from './component/auth/signin/signin.component';
 // import { CategoryComponent } from './component/pages/admin/category/category.component';
 import { AddCategoryComponent } from './component/pages/admin/add-category/add-category.component';
 
+import { CategoryComponent } from './component/pages/admin/category/category.component';
+import { CategoryItemComponent } from './component/pages/admin/category-item/category-item.component';
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -38,8 +41,9 @@ import { AddCategoryComponent } from './component/pages/admin/add-category/add-c
    
     SignupComponent,
     SigninComponent,
-    // CategoryComponent,
     AddCategoryComponent,
+    CategoryComponent,
+    CategoryItemComponent,
     
   ],
   imports: [
