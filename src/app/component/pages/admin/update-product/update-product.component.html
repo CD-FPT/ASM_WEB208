@@ -1,0 +1,29 @@
+<form (ngSubmit)="onHandleEdit()" [formGroup]="productForm">
+    <h2>Cập nhật sản phẩm</h2>
+    <div class="detail">
+        <div class="img">
+            <img [src]="productForm.get('image')?.value" alt="">
+        </div>
+        <div class="detail-info">
+            <div class="mb-3">
+                <label for="exampleInputEmail1" class="form-label">Tên sản phẩm</label>
+                <input type="email" class="form-control" formControlName="name">
+            </div>
+            <div class="mb-3">
+                <label for="exampleInputPassword1" class="form-label">Giá sản phấm</label>
+                <input type="number" class="form-control" formControlName="price">
+            </div>
+            <div class="mb-3">
+                <label for="exampleInputPassword1" class="form-label">Mô tả sản phấm</label>
+                <input type="text" class="form-control" formControlName="description">
+            </div>
+            <div class="mb-3">
+                <label for="" class="form-label">Danh mục sản phấm</label>
+                <select  formControlName="categoryId" class="form-select" >
+                    <option *ngFor="let cate of category" value="{{cate._id}}">{{cate.name}}</option>
+                  </select>
+            </div>
+            <button type="submit" class="btn btn-primary">Submit</button>
+        </div>
+    </div>
+</form>

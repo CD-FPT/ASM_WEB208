@@ -1,66 +1,71 @@
 {
-    "products": [
-        {
-            "id": 1,
-            "name": "Iphone 11",
-            "price": 11000,
-            "description": "Durable premium design 11",
-            "img": "https://cdn.tgdd.vn/Products/Images/42/153856/iphone-11-trang-200x200.jpg",
-            "idCate": 1
-        },
-        {
-            "id": 2,
-            "name": "Iphone 12",
-            "price": 12000,
-            "description": "Durable premium design 12",
-            "img": "https://cdn.tgdd.vn/Products/Images/42/213031/iphone-12-tim-1-600x600.jpg",
-            "idCate": 1
-        },
-        {
-            "id": 3,
-            "name": "Iphone 13",
-            "price": 13000,
-            "description": "Durable premium design 13",
-            "img": "https://cdn.tgdd.vn/Products/Images/42/223602/iphone-13-blue-1-600x600.jpg",
-            "idCate": 2
-        },
-        {
-            "id": 4,
-            "name": "Iphone 14",
-            "price": 14000,
-            "description": "Durable premium design 14",
-            "img": "https://cdn.tgdd.vn/Products/Images/42/251192/iphone-14-pro-max-den-thumb-600x600.jpg",
-            "idCate": 2
-        }
-    ],
-    "category": [
-        {
-            "id": 1,
-            "cateName": "Điện thoại"
-        },
-        {
-            "id": 2,
-            "cateName": "Lap top"
-        },
-        {
-            "id": 3,
-            "cateName": "Tablet"
-        }
-    ],
-    "users": [
-        {
-            "id": 1,
-            "name": "Đặng Quang Huy",
-            "email": "dangquanghuy@gmail.com",
-            "phone": "0123456789",
-            "role": "member"
-        },
-        {
-            "id": 2,
-            "name": "Quang Huy",
-            "email": "huydqph24532@fpt.edu.vn",
-            "phone": "9876543210",
-            "role": "admin"
-        }
-    ]
+  "products": [
+    {
+      "id": 1,
+      "name": "Iphone 11",
+      "price": 11000,
+      "description": "Durable premium design 11",
+      "img": "https://cdn.tgdd.vn/Products/Images/42/153856/iphone-11-trang-200x200.jpg",
+      "idCate": 1
+    },
+    {
+      "id": 2,
+      "name": "Iphone 12",
+      "price": 12000,
+      "description": "Durable premium design 12",
+      "img": "https://cdn.tgdd.vn/Products/Images/42/213031/iphone-12-tim-1-600x600.jpg",
+      "idCate": 1
+    },
+    {
+      "id": 3,
+      "name": "Iphone 13",
+      "price": 13000,
+      "description": "Durable premium design",
+      "img": "https://cdn.tgdd.vn/Products/Images/42/223602/iphone-13-blue-1-600x600.jpg"
+    },
+    {
+      "name": "Iphone 14",
+      "price": 14000,
+      "description": "Durable premium design",
+      "img": "data:image/jpeg;base64,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",
+      "id": 4
+    },
+    {
+      "name": "Iphone X",
+      "price": 10000,
+      "description": "Durable premium design",
+      "img": "data:image/jpeg;base64,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",
+      "id": 5
+    }
+  ],
+  "category": [
+    {
+      "id": 1,
+      "cateName": "Điện thoại"
+    },
+    {
+      "id": 2,
+      "cateName": "Lap top"
+    },
+    {
+      "id": 3,
+      "cateName": "Tablet"
+    }
+  ],
+  "users": [
+    {
+      "id": 1,
+      "name": "Đặng Quang Huy",
+      "email": "dangquanghuy@gmail.com",
+      "phone": "0123456789",
+      "role": "member"
+    },
+    {
+      "id": 2,
+      "name": "Quang Huy",
+      "email": "huydqph24532@fpt.edu.vn",
+      "phone": "9876543210",
+      "role": "admin"
+    }
+  ]
 }

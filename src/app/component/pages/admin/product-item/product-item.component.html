@@ -1,0 +1,14 @@
+<td class="align-middle text-center">{{ index + 1 }}</td>
+<td class="align-middle" width="100"><img width="100" [src]="product.image" /></td>
+<td class="align-middle">{{ product.name }}</td>
+<td class="align-middle">{{ product.price }}</td>
+<td class="align-middle">{{product.description}}</td>
+<td class="align-middle">{{product.categoryId?.name}}</td>
+<td class="align-middle">
+  <button class="btn btn-danger" (click)="confirmDelete(product._id)">
+    Remove
+  </button>
+  <a [routerLink]="['/admin/products',product._id,'update']">
+    <button class="btn btn-primary ms-2"> Update </button>
+  </a>
+</td>
