@@ -44,7 +44,8 @@ export class UpdateProductComponent {
             image: this.product.image,
             categoryId: this.product.categoryId,
           })
-        })        
+        })
+
       })
     })
     // console.log(this.productForm.value); 
