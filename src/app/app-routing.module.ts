@@ -13,6 +13,7 @@ import { SigninComponent } from './component/auth/signin/signin.component';
 import { SignupComponent } from './component/auth/signup/signup.component';
 import { AddCategoryComponent } from './component/pages/admin/add-category/add-category.component';
 import { CategoryComponent } from './component/pages/admin/category/category.component';
+import { UpdateCategoryComponent } from './component/pages/admin/update-category/update-category.component';
 
 const routes: Routes = [
   {
@@ -33,6 +34,7 @@ const routes: Routes = [
       { path: 'products/:id/update', component: UpdateProductComponent },
       { path: 'categoryAdd', component: AddCategoryComponent },
       { path: 'category', component: CategoryComponent },
+      { path: 'category/:id/update', component: UpdateCategoryComponent },
     ]
   },
 ];

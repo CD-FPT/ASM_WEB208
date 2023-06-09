@@ -48,7 +48,6 @@ export class UpdateProductComponent {
           })
         })
 
-        
       })
     })
     // console.log(this.productForm.value); 
