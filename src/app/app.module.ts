@@ -24,6 +24,7 @@ import { AddCategoryComponent } from './component/pages/admin/add-category/add-c
 
 import { CategoryComponent } from './component/pages/admin/category/category.component';
 import { CategoryItemComponent } from './component/pages/admin/category-item/category-item.component';
+import { UpdateCategoryComponent } from './component/pages/admin/update-category/update-category.component';
 
 @NgModule({
   declarations: [
@@ -44,6 +45,7 @@ import { CategoryItemComponent } from './component/pages/admin/category-item/cat
     AddCategoryComponent,
     CategoryComponent,
     CategoryItemComponent,
+    UpdateCategoryComponent,
     
   ],
   imports: [
