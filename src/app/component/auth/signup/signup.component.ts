@@ -39,9 +39,12 @@ export class SignupComponent {
     if (this.formSignup.valid) {
       this.auth.signup(user).subscribe(data => {
         console.log(data);
-
       })
     }
 
+  }
+  isLoading = false;
+  toggleLoading() {
+    this.isLoading = true
   }
 }
