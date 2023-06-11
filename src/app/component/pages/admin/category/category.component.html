@@ -10,7 +10,7 @@
         </tr>
       </thead>
       <tbody>
-        <tr app-category-item *ngFor="let category of categorys; let i = index" [category]="category" [index]="i" (onRemove)="removeItem(category._id)">
+        <tr app-category-item *ngFor="let category of categories; let i = index" [category]="category" [index]="i" (onRemove)="removeItem(category._id)">
         </tr>
       </tbody>
     </table>

@@ -6,7 +6,7 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  title = 'projectName';
+  title = 'ASM WEB208';
   carouselImages = [
     {
       url: 'https://diamu.com.bd/wp-content/uploads/2022/09/Apple-iPhone-14-Pro-and-14-Pro-Max-4.jpg',

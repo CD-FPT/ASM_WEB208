@@ -32,8 +32,6 @@ export class UpdateProductComponent {
     this.route.paramMap.subscribe(params => {
       const id = params.get('id');
       console.log(id);
-
-
       this.productService.getProduct(id).subscribe(data => {
         this.product = data.datas
         console.log(this.product);
@@ -63,10 +61,10 @@ export class UpdateProductComponent {
         image: this.productForm.value.image || "",
         categoryId: this.productForm.value.categoryId || "",
       }
-      // console.log(this.product._id);
+      console.log(product);
       
       this.productService.updateProduct(product).subscribe(data => {
-        console.log(data);
+        // console.log(data);
         this.router.navigate(['admin/products'])
       }, error => console.log(error.message)
       )
