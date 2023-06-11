@@ -12,7 +12,9 @@ import { AdminLayoutComponent } from './component/layouts/admin-layout/admin-lay
 import { SigninComponent } from './component/auth/signin/signin.component';
 import { SignupComponent } from './component/auth/signup/signup.component';
 import { AddCategoryComponent } from './component/pages/admin/add-category/add-category.component';
-
+import { CategoryComponent } from './component/pages/admin/category/category.component';
+import { UpdateCategoryComponent } from './component/pages/admin/update-category/update-category.component';
+import { authGuard } from './component/guard/auth.guard';
 const routes: Routes = [
   {
     path: '', component: WebLayoutComponent, children: [
@@ -24,13 +26,15 @@ const routes: Routes = [
   { path: 'signin', component: SigninComponent },
   { path: 'signup', component: SignupComponent },
   {
-    path: 'admin', component: AdminLayoutComponent, children: [
+    path: 'admin', component: AdminLayoutComponent,canActivate:[authGuard], children: [
       { path: '', redirectTo: 'dashboard', pathMatch: 'full' },
       { path: 'dashboard', component: DashboardComponent },
       { path: 'products', component: ManagerProductsComponent },
       { path: 'add', component: AddProductComponent },
       { path: 'products/:id/update', component: UpdateProductComponent },
       { path: 'categoryAdd', component: AddCategoryComponent },
+      { path: 'category', component: CategoryComponent },
+      { path: 'category/:id/update', component: UpdateCategoryComponent },
     ]
   },
 ];

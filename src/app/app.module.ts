@@ -1,6 +1,6 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
-import { HttpClientModule } from '@angular/common/http';
+import { HttpClientModule,HTTP_INTERCEPTORS } from '@angular/common/http';
 import { AppRoutingModule } from './app-routing.module';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 
@@ -22,6 +22,11 @@ import { SigninComponent } from './component/auth/signin/signin.component';
 // import { CategoryComponent } from './component/pages/admin/category/category.component';
 import { AddCategoryComponent } from './component/pages/admin/add-category/add-category.component';
 
+import { CategoryComponent } from './component/pages/admin/category/category.component';
+import { CategoryItemComponent } from './component/pages/admin/category-item/category-item.component';
+import { UpdateCategoryComponent } from './component/pages/admin/update-category/update-category.component';
+import { AuthInterceptor } from './component/guard/auth.interceptor';
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -38,8 +43,10 @@ import { AddCategoryComponent } from './component/pages/admin/add-category/add-c
    
     SignupComponent,
     SigninComponent,
-    // CategoryComponent,
     AddCategoryComponent,
+    CategoryComponent,
+    CategoryItemComponent,
+    UpdateCategoryComponent,
     
   ],
   imports: [
@@ -49,10 +56,13 @@ import { AddCategoryComponent } from './component/pages/admin/add-category/add-c
     FormsModule,
     ReactiveFormsModule,
     // CarouselModule.forRoot()
-    
 
   ],
-  providers: [],
+  providers: [{
+    provide: HTTP_INTERCEPTORS,
+    useClass:AuthInterceptor,
+    multi:true
+  }],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

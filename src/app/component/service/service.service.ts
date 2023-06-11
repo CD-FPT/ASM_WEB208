@@ -9,7 +9,7 @@ export class ServiceService {
 
 
   constructor(private http: HttpClient) { }
-  getProducts() {
+  getProducts():Observable<any> {
     return this.http.get<any>('http://localhost:8088/api/products');
   }
   getProduct(id: any): Observable<any> {
