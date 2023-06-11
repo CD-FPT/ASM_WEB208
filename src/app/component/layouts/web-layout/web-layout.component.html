@@ -28,7 +28,7 @@
         <ng-container *ngIf="isLoggedIn; else signedOut">
           <!-- Hiển thị icon user khi đã đăng nhập thành công -->
           <i id="user" class="fas fa-user"></i>
-          <!-- <button (click)="onSignOut()">Sign out</button> -->
+          <button  (click)="SignOut()">Sign out</button>
         </ng-container>
         <ng-template #signedOut>
           <!-- Hiển thị các button "Sign in" và "Sign up" khi chưa đăng nhập -->

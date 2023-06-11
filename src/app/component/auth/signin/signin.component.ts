@@ -21,9 +21,7 @@ export class SigninComponent {
       this.auth.signin(this.formSignin.value).subscribe(data => {
         localStorage.setItem('credential', JSON.stringify(data))
         const role = data?.user?.role
-        // console.log(role.password);y
-        console.log(data);
-        
+        // console.log(role.password);
         this.auth.login(role)
       })
     }

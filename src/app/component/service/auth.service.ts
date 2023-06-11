@@ -24,18 +24,25 @@ export class AuthService {
     }
   }
   signin(user: any): Observable<any> {
-    return this.http.post(`${this.API_URL}/signin`, user)
+    return this.http.post(`${this.API_URL}/signin`, user).pipe(
+      tap((response: any) => {
+        if (response.accessToken) {
+          localStorage.setItem('credential', JSON.stringify(response));
+          console.log( JSON.stringify(response));
+        }
+      })
+    );
   }
 
   isAuthenticated(): any {
     return JSON.parse(localStorage.getItem('credential')!) || {};
   }
   getRole(): string {
-    const credential = JSON.parse(localStorage.getItem('credential') || '{}');
-    return credential.role || '';
+    const credential = JSON.parse(localStorage.getItem('credential')!) || {};
+    return credential?.user?.role || '';
   }
   signout(): void {
     localStorage.removeItem('credential');
-    // Chuyển hướng đến trang sign-in hoặc trang khác theo yêu cầu của bạn
+    this.router.navigate(['/'])
   }
 }
