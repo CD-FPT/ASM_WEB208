@@ -24,9 +24,18 @@
           <li><a class="nav-link scrollto " href="#about us">About us</a></li>
         </ul>
       </nav>
-
-      <a routerLink="signin" class="get-started-btn scrollto">Sign in</a>
-      <a routerLink="signup" class="get-started-btn scrollto">Sign up</a>
+      <div class="auth">
+        <ng-container *ngIf="isLoggedIn; else signedOut">
+          <!-- Hiển thị icon user khi đã đăng nhập thành công -->
+          <i id="user" class="fas fa-user"></i>
+          <!-- <button (click)="onSignOut()">Sign out</button> -->
+        </ng-container>
+        <ng-template #signedOut>
+          <!-- Hiển thị các button "Sign in" và "Sign up" khi chưa đăng nhập -->
+          <a routerLink="signin" class="get-started-btn scrollto">Sign in</a>
+          <a routerLink="signup" class="get-started-btn scrollto">Sign up</a>
+        </ng-template>
+      </div>
     </div>
   </header><!-- End Header -->
 

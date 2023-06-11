@@ -30,5 +30,12 @@ export class AuthService {
   isAuthenticated(): any {
     return JSON.parse(localStorage.getItem('credential')!) || {};
   }
-
+  getRole(): string {
+    const credential = JSON.parse(localStorage.getItem('credential') || '{}');
+    return credential.role || '';
+  }
+  signout(): void {
+    localStorage.removeItem('credential');
+    // Chuyển hướng đến trang sign-in hoặc trang khác theo yêu cầu của bạn
+  }
 }
