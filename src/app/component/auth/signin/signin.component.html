@@ -26,6 +26,7 @@
                 formSignin.get('password')?.hasError('required') &&
                 (formSignin.get('password')?.touched || formSignin.get('password')?.dirty)
               ">Mật khẩu không được để trống</div>
+              <div *ngIf="errorMessage" class="error-message text-danger">{{ errorMessage }}</div>             
                 <button>Đăng Nhập</button>
             </form>
         </div>
