@@ -37,7 +37,7 @@
                 <input type="password" formControlName="password" placeholder="Password" />
                 <div class="errorValidate" *ngIf="
                     formSignup.get('password')?.hasError('required') &&
-                    (formSignup.get('password')?.touched || formSignup.get('email')?.dirty)
+                    (formSignup.get('password')?.touched || formSignup.get('password')?.dirty)
                     ">
                     Password không được để trống
                 </div>
@@ -49,7 +49,9 @@
                     ">
                     Password không trùng nhau
                 </div>
-                <button>Sign up</button>
+                <button  (click)="toggleLoading()">
+                    <img *ngIf="isLoading" style="width: 18px;" src="../../../../images/loading-gif.gif" alt="">
+                    Sign up</button>
             </form>
         </div>
 

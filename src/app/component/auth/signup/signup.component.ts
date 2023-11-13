@@ -2,6 +2,7 @@ import { Component } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { AuthService } from '../../service/auth.service';
 import { IUser } from '../../interface/user';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-signup',
@@ -9,7 +10,7 @@ import { IUser } from '../../interface/user';
   styleUrls: ['./signup.component.css']
 })
 export class SignupComponent {
-  constructor(private fb: FormBuilder, private auth: AuthService) { }
+  constructor(private fb: FormBuilder, private auth: AuthService,private router:Router) { }
 
   formSignup = this.fb.group({
     username: ['', [Validators.required]],
@@ -38,10 +39,14 @@ export class SignupComponent {
     };
     if (this.formSignup.valid) {
       this.auth.signup(user).subscribe(data => {
+        this.router.navigate(['/signin'])
         console.log(data);
-
       })
     }
 
+  }
+  isLoading = false;
+  toggleLoading() {
+    this.isLoading = true
   }
 }
